@@ -38,8 +38,8 @@
   <h3 class="landmark heading"><%= ts('View Sorting and Actions') %></h3>
   <ul class="sorting actions" role="menu">
     <li><h4 class="heading"><%= ts('Sort By') %></h4></li>
+    <li><%= sort_link ts("Date"), "date" %></li>
     <% unless @user.preference.hide_hit_counts %>
-      <li><%= sort_link ts("Date"), "date" %></li>
       <li><%= sort_link ts('Hits'), "hits", {:desc_default => true} %></li>
     <% end %>
     <li><%= sort_link ts('Kudos'), "kudos.count", {:desc_default => true} %></li>
